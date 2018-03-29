@@ -118,7 +118,7 @@ fi
 : ${NEO4J_dbms_udc_enabled:="false"}
 : ${NEO4J_browser_remote__content__hostname__whitelist:="*"}
 : ${NEO4J_dbms_allow__format__migration:="true"}
-
+: ${NEO4J_dbms_memory_pagecache_size:="5g"}
 
 
 # unset old hardcoded unsupported env variables
