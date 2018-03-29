@@ -114,6 +114,7 @@ fi
 : ${NEO4J_dbms_security_auth__enabled:="false"}
 : ${NEO4J_dbms_connector_bolt_advertised__address:="$(hostname):7687"}
 : ${NEO4J_dbms_active__database:="panama.graphdb"}
+: ${NEO4J_dbms_allow__upgrade:="true"}
 
 
 
