@@ -119,6 +119,7 @@ fi
 : ${NEO4J_browser_remote__content__hostname__whitelist:="*"}
 : ${NEO4J_dbms_allow__format__migration:="true"}
 : ${NEO4J_dbms_memory_pagecache_size:="5g"}
+: ${NEO4J_dbms_auto__index_nodes_enabled:="true"}
 
 
 # unset old hardcoded unsupported env variables
@@ -139,8 +140,8 @@ unset NEO4J_dbms_txLog_rotation_retentionPolicy NEO4J_UDC_SOURCE \
 : ${NEO4J_dbms_tx__log_rotation_retention__policy:=100M size}
 : ${NEO4J_dbms_memory_pagecache_size:=512M}
 : ${NEO4J_wrapper_java_additional:=-Dneo4j.ext.udc.source=docker}
-: ${NEO4J_dbms_memory_heap_initial__size:=512M}
-: ${NEO4J_dbms_memory_heap_max__size:=512M}
+: ${NEO4J_dbms_memory_heap_initial__size:=1g}
+: ${NEO4J_dbms_memory_heap_max__size:=6g}
 : ${NEO4J_dbms_connectors_default__listen__address:=0.0.0.0}
 : ${NEO4J_dbms_connector_http_listen__address:=0.0.0.0:7474}
 : ${NEO4J_dbms_connector_https_listen__address:=0.0.0.0:7473}
@@ -200,7 +201,7 @@ else
   echo "Skipping copying data over to databases directory as panama.graphdb already exists"
 fi
 
-echo "Copying config and plugins"
+#echo "Copying config and plugins"
 #cp -R ./panama-papers/ICIJ\ Panama\ Papers/panama_data_for_neo4j/conf/* conf/
 #cp -R ./panama-papers/ICIJ\ Panama\ Papers/panama_data_for_neo4j/plugins/* plugins/
 
